@@ -118,8 +118,8 @@ class Settings:
     # Hadoop和Spark环境配置
     # =============================================================================
     
-    # Hadoop安装路径配置
-    HADOOP_HOME_PATH = str(ACTUAL_PROJECT_ROOT / "hadoop" / "hadoop-3.3.6")
+    # Hadoop安装路径配置（仓库内置 windows 工具位于 hadoop/bin）
+    HADOOP_HOME_PATH = str(ACTUAL_PROJECT_ROOT / "hadoop")
     HADOOP_HOME_BIN_PATH = str(Path(HADOOP_HOME_PATH) / "bin")
 
     # Spark工作目录配置
@@ -133,7 +133,7 @@ class Settings:
     
     # 定义必需的JAR文件路径
     SQL_KAFKA_JAR = PYTHON_PROJECT_DIR / "jars" / "spark-sql-kafka-0-10_2.12-3.5.0.jar"
-    KAFKA_CLIENTS_JAR = PYTHON_PROJECT_DIR / "jars" / "kafka-clients-3.4.1.jar"
+    KAFKA_CLIENTS_JAR = PYTHON_PROJECT_DIR / "jars" / "kafka-clients-3.5.0.jar"
     MONGO_CONNECTOR_JAR = PYTHON_PROJECT_DIR / "jars" / "mongo-spark-connector_2.12-3.0.1.jar"
     COMMONS_POOL2_JAR = PYTHON_PROJECT_DIR / "jars" / "commons-pool2-2.11.1.jar"
     SPARK_TOKEN_PROVIDER_KAFKA_JAR = PYTHON_PROJECT_DIR / "jars" / "spark-token-provider-kafka-0-10_2.12-3.5.0.jar"

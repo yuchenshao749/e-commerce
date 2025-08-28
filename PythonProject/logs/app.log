@@ -17079,3 +17079,494 @@ py4j.protocol.Py4JNetworkError: Error while sending
 [2025-06-02 13:27:02] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
 [2025-06-02 13:27:02] [INFO] [__main__.stop_processing:832] [STOP] 停止流处理服务...
 [2025-06-02 13:27:04] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[2025-06-02 17:22:14] [INFO] [__main__.<module>:922] [MAIN] 启动电商Spark流处理器...
+[2025-06-02 17:22:14] [INFO] [__main__._setup_spark:232] [SPARK_SETUP] 开始初始化Spark会话...
+[2025-06-02 17:22:14] [INFO] [__main__._setup_spark:248] [SPARK_SETUP] 应用Spark配置项: 26个
+[2025-06-02 17:22:14] [INFO] [__main__._setup_spark:259] [SPARK_SETUP] Spark连接尝试 1/3
+[2025-06-02 17:22:14] [INFO] [__main__.run_data_generator:611] [STARTUP] 启动电商用户行为数据生成器...
+[2025-06-02 17:22:14] [INFO] [__main__.__init__:133] [INIT] 开始生成基础数据...
+[2025-06-02 17:22:14] [INFO] [__main__._generate_categories:202] [GENERATING] 生成 20 个商品分类...
+[2025-06-02 17:22:14] [INFO] [__main__._generate_categories:213] [SUCCESS] 商品分类生成完成
+[2025-06-02 17:22:14] [INFO] [__main__._generate_users:156] [GENERATING] 生成 1000 个用户...
+[2025-06-02 17:22:14] [INFO] [__main__._generate_users:173] [SUCCESS] 用户数据生成完成
+[2025-06-02 17:22:14] [INFO] [__main__._generate_products:229] [GENERATING] 生成 500 个商品...
+[2025-06-02 17:22:14] [INFO] [__main__._generate_products:255] [SUCCESS] 商品数据生成完成
+[2025-06-02 17:22:14] [INFO] [__main__.__init__:138] [SUCCESS] 数据生成器初始化完成
+[2025-06-02 17:22:14] [INFO] [__main__.__init__:139] [INFO] 用户数量: 1000
+[2025-06-02 17:22:14] [INFO] [__main__.__init__:140] [INFO] 商品数量: 500
+[2025-06-02 17:22:14] [INFO] [__main__.__init__:141] [INFO] 分类数量: 20
+[2025-06-02 17:22:14] [INFO] [__main__.start_generation:376] [INIT] 初始化Kafka生产者连接...
+[2025-06-02 17:22:14] [INFO] [kafka.conn.connect:380] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-06-02 17:22:14] [INFO] [kafka.conn.check_version:1205] Probing node bootstrap-0 broker version
+[2025-06-02 17:22:14] [INFO] [kafka.conn.connect:410] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+[2025-06-02 17:22:14] [INFO] [kafka.conn.check_version:1267] Broker version identified as 2.5.0
+[2025-06-02 17:22:14] [INFO] [kafka.conn.check_version:1268] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2025-06-02 17:22:14] [INFO] [kafka_integration.producer._connect:110] [SUCCESS] Kafka生产者连接成功: localhost:9092
+[2025-06-02 17:22:14] [INFO] [__main__.start_generation:389] [SUCCESS] 数据生成器启动成功
+[2025-06-02 17:22:14] [INFO] [kafka.conn.connect:380] <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-06-02 17:22:14] [INFO] [kafka.conn.connect:410] <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+[2025-06-02 17:22:14] [INFO] [kafka.conn.close:919] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+[2025-06-02 17:22:20] [INFO] [__main__._initialize_system:838] [INIT] 初始化电商实时分析系统...
+[2025-06-02 17:22:21] [INFO] [__main__._initialize_databases:875] [SUCCESS] MongoDB连接成功
+[2025-06-02 17:22:21] [INFO] [__main__._initialize_databases:897] [SUCCESS] Redis连接成功
+[2025-06-02 17:22:21] [INFO] [kafka.conn.connect:380] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-06-02 17:22:21] [INFO] [kafka.conn.check_version:1205] Probing node bootstrap-0 broker version
+[2025-06-02 17:22:21] [INFO] [kafka.conn.connect:410] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+[2025-06-02 17:22:21] [INFO] [kafka.conn.check_version:1267] Broker version identified as 2.5.0
+[2025-06-02 17:22:21] [INFO] [kafka.conn.check_version:1268] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2025-06-02 17:22:21] [INFO] [kafka_integration.producer._connect:110] [SUCCESS] Kafka生产者连接成功: localhost:9092
+[2025-06-02 17:22:21] [INFO] [__main__._initialize_databases:905] [SUCCESS] Kafka连接成功
+[2025-06-02 17:22:21] [INFO] [ml_models.recommendation_engine.__init__:26] 推荐引擎数据库连接初始化成功
+[2025-06-02 17:22:21] [INFO] [__main__._initialize_system:853] [SUCCESS] 系统初始化完成
+[2025-06-02 17:22:26] [INFO] [__main__._setup_spark:268] [SPARK_SETUP] 执行Spark连接测试...
+[2025-06-02 17:22:41] [INFO] [__main__._setup_spark:271] [SPARK_SETUP] Spark连接测试成功
+[2025-06-02 17:22:41] [INFO] [__main__._setup_spark:277] [SPARK_JVM] java.library.path: C:\Java\jdk-11.0.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\30650\Pycha...
+[2025-06-02 17:22:41] [INFO] [__main__._setup_spark:278] [SPARK_JVM] hadoop.home.dir: 未设置
+[2025-06-02 17:22:41] [INFO] [__main__._setup_spark:282] [SPARK_SETUP] Spark会话初始化成功
+[2025-06-02 17:22:41] [INFO] [__main__._setup_connections:320] [DATABASE] MongoDB连接成功
+[2025-06-02 17:22:41] [INFO] [__main__._setup_connections:341] [DATABASE] Redis连接成功
+[2025-06-02 17:22:41] [INFO] [__main__.start_processing:810] [START] 启动Spark流处理服务...
+[2025-06-02 17:22:41] [INFO] [__main__._process_user_behavior_stream:743] [STREAM_PROC] 使用检查点目录: file:///C:/Users/30650/PycharmProjects/e-commerce/PythonProject/checkpoints
+[2025-06-02 17:22:41] [INFO] [__main__._process_user_behavior_stream:751] [STREAM_PROC] 用户行为流处理启动成功（foreachBatch模式）
+[2025-06-02 17:22:41] [INFO] [__main__.start_processing:815] [SUCCESS] 所有流处理任务已启动
+[2025-06-02 17:22:44] [INFO] [__main__._log_generation_stats:507] [STATS] 总事件数: 300, 生成速度: 10.0/秒, 错误数: 0
+[2025-06-02 17:22:44] [INFO] [__main__._log_generation_stats:514] [STATS] 事件类型分布: click: 92, view: 152, add_to_cart: 44, purchase: 11, rate: 1
+[2025-06-02 17:22:46] [INFO] [__main__._process_batch_data:782] [BATCH_1582] 处理 380 条记录
+[2025-06-02 17:22:47] [INFO] [__main__._write_to_mongodb:498] [BATCH_1582] MongoDB写入 380 条记录
+[2025-06-02 17:22:52] [INFO] [__main__._update_real_time_stats:600] [BATCH_1582] 统计更新完成 - 活跃用户: 309, 页面浏览: 187, 购买: 12, 收入: 13069.40
+[2025-06-02 17:22:52] [INFO] [__main__._process_batch_data:794] [BATCH_1582] 批次处理完成
+[2025-06-02 17:22:53] [INFO] [__main__._process_batch_data:782] [BATCH_1583] 处理 70 条记录
+[2025-06-02 17:22:54] [INFO] [__main__._write_to_mongodb:498] [BATCH_1583] MongoDB写入 70 条记录
+[2025-06-02 17:22:58] [INFO] [__main__._update_real_time_stats:600] [BATCH_1583] 统计更新完成 - 活跃用户: 68, 页面浏览: 37, 购买: 4, 收入: 2503.73
+[2025-06-02 17:22:58] [INFO] [__main__._process_batch_data:794] [BATCH_1583] 批次处理完成
+[2025-06-02 17:23:00] [INFO] [__main__._process_batch_data:782] [BATCH_1584] 处理 70 条记录
+[2025-06-02 17:23:01] [INFO] [__main__._write_to_mongodb:498] [BATCH_1584] MongoDB写入 70 条记录
+[2025-06-02 17:23:04] [INFO] [__main__._update_real_time_stats:600] [BATCH_1584] 统计更新完成 - 活跃用户: 66, 页面浏览: 36, 购买: 1, 收入: 1481.68
+[2025-06-02 17:23:04] [INFO] [__main__._process_batch_data:794] [BATCH_1584] 批次处理完成
+[2025-06-02 17:23:10] [INFO] [__main__._process_batch_data:782] [BATCH_1585] 处理 100 条记录
+[2025-06-02 17:23:11] [INFO] [__main__._write_to_mongodb:498] [BATCH_1585] MongoDB写入 100 条记录
+[2025-06-02 17:23:12] [INFO] [__main__.start_generation:425] [INFO] 接收到中断信号，停止数据生成
+[2025-06-02 17:23:12] [INFO] [__main__.start_generation:439] [STOP] 数据生成器已停止
+[2025-06-02 17:23:12] [INFO] [__main__.stop_generation:530] [INFO] 数据生成器未在运行
+[2025-06-02 17:23:12] [INFO] [kafka.producer.kafka.close:483] Closing the Kafka producer with 0 secs timeout.
+[2025-06-02 17:23:12] [INFO] [kafka.producer.kafka.close:499] Proceeding to force close the producer since pending requests could not be completed within timeout 0.
+[2025-06-02 17:23:13] [ERROR] [__main__._update_real_time_stats:604] [BATCH_1585] 统计更新失败: An error occurred while calling o567.collectToPython.
+: org.apache.spark.SparkException: Job 38 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1184)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1182)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:79)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:2883)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:84)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:2780)
+	at org.apache.spark.SparkContext.$anonfun$stop$11(SparkContext.scala:2105)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1484)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2105)
+	at org.apache.spark.SparkContext.$anonfun$new$35(SparkContext.scala:670)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2066)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2238)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2333)
+	at org.apache.spark.rdd.RDD.$anonfun$reduce$1(RDD.scala:1111)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.RDD.reduce(RDD.scala:1093)
+	at org.apache.spark.rdd.RDD.$anonfun$takeOrdered$1(RDD.scala:1545)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.RDD.takeOrdered(RDD.scala:1533)
+	at org.apache.spark.sql.execution.TakeOrderedAndProjectExec.executeCollect(limit.scala:204)
+	at org.apache.spark.sql.Dataset.$anonfun$collectToPython$1(Dataset.scala:3728)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$2(Dataset.scala:3898)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:510)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3896)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3896)
+	at org.apache.spark.sql.Dataset.collectToPython(Dataset.scala:3725)
+	at jdk.internal.reflect.GeneratedMethodAccessor190.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy37.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:51)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:51)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:32)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:665)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:663)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:68)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:663)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:256)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:68)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:219)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:213)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:307)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:285)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:208)
+
+[2025-06-02 17:23:13] [INFO] [__main__._process_batch_data:794] [BATCH_1585] 批次处理完成
+[2025-06-02 17:23:14] [INFO] [__main__.signal_handler:883] 接收到停止信号，正在关闭流处理器...
+[2025-06-02 17:23:14] [INFO] [__main__.stop_processing:832] [STOP] 停止流处理服务...
+[2025-06-02 17:23:14] [INFO] [root.send_command:1052] Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\30650\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+[2025-06-02 17:23:14] [ERROR] [root.send_command:1055] Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "C:\Users\30650\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2025-06-02 17:23:14] [INFO] [__main__._shutdown_system:1132] [INFO] 关闭系统...
+[2025-06-02 17:23:14] [INFO] [kafka.producer.kafka.close:483] Closing the Kafka producer with 4294967.0 secs timeout.
+[2025-06-02 17:23:14] [INFO] [kafka.conn.close:919] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+[2025-06-02 17:23:14] [INFO] [kafka_integration.producer.close:318] [KAFKA] 生产者已关闭
+[2025-06-02 17:23:14] [INFO] [kafka_integration.producer.close_kafka_producer:441] [KAFKA] 全局生产者已清理
+[2025-06-02 17:23:14] [INFO] [__main__._shutdown_system:1150] [SUCCESS] 系统已关闭
+[2025-06-02 17:23:16] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[2025-06-02 17:23:16] [INFO] [__main__.run_stream_processor:907] 确保流处理器资源清理...
+[2025-06-02 17:23:16] [INFO] [__main__.stop_processing:832] [STOP] 停止流处理服务...
+[2025-06-02 17:23:18] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[2025-06-02 17:23:18] [INFO] [__main__.stop_processing:832] [STOP] 停止流处理服务...
+[2025-06-02 17:23:20] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[2025-08-26 13:33:35] [INFO] [__main__._initialize_system:844] [INIT] 初始化电商实时分析系统...
+[2025-08-26 13:33:35] [INFO] [__main__._initialize_databases:881] [SUCCESS] MongoDB连接成功
+[2025-08-26 13:33:35] [INFO] [__main__._initialize_databases:903] [SUCCESS] Redis连接成功
+[2025-08-26 13:33:35] [INFO] [kafka.conn.connect:380] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-08-26 13:33:35] [INFO] [kafka.conn.check_version:1205] Probing node bootstrap-0 broker version
+[2025-08-26 13:33:35] [INFO] [kafka.conn.connect:410] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+[2025-08-26 13:33:35] [INFO] [kafka.conn.check_version:1267] Broker version identified as 2.5.0
+[2025-08-26 13:33:35] [INFO] [kafka.conn.check_version:1268] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2025-08-26 13:33:35] [INFO] [kafka_integration.producer._connect:110] [SUCCESS] Kafka生产者连接成功: localhost:9092
+[2025-08-26 13:33:35] [INFO] [kafka.conn.connect:380] <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-08-26 13:33:35] [INFO] [kafka.conn.connect:410] <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+[2025-08-26 13:33:35] [INFO] [kafka.conn.close:919] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+[2025-08-26 13:33:35] [WARNING] [kafka.cluster.update_metadata:293] Topic system_metrics_topic is not available during auto-create initialization
+[2025-08-26 13:33:35] [INFO] [__main__._initialize_databases:911] [SUCCESS] Kafka连接成功
+[2025-08-26 13:33:35] [INFO] [ml_models.recommendation_engine.__init__:26] 推荐引擎数据库连接初始化成功
+[2025-08-26 13:33:35] [INFO] [__main__._initialize_system:859] [SUCCESS] 系统初始化完成
+[2025-08-26 13:33:44] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:33:44] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:33:52] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:33:52] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:33:56] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:33:56] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:34:07] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:34:08] [INFO] [__main__.run_data_generator:611] [STARTUP] 启动电商用户行为数据生成器...
+[2025-08-26 13:34:08] [INFO] [__main__.__init__:133] [INIT] 开始生成基础数据...
+[2025-08-26 13:34:08] [INFO] [__main__._generate_categories:202] [GENERATING] 生成 20 个商品分类...
+[2025-08-26 13:34:08] [INFO] [__main__._generate_categories:213] [SUCCESS] 商品分类生成完成
+[2025-08-26 13:34:08] [INFO] [__main__._generate_users:156] [GENERATING] 生成 1000 个用户...
+[2025-08-26 13:34:08] [INFO] [__main__._generate_users:173] [SUCCESS] 用户数据生成完成
+[2025-08-26 13:34:08] [INFO] [__main__._generate_products:229] [GENERATING] 生成 500 个商品...
+[2025-08-26 13:34:08] [INFO] [__main__._generate_products:255] [SUCCESS] 商品数据生成完成
+[2025-08-26 13:34:08] [INFO] [__main__.__init__:138] [SUCCESS] 数据生成器初始化完成
+[2025-08-26 13:34:08] [INFO] [__main__.__init__:139] [INFO] 用户数量: 1000
+[2025-08-26 13:34:08] [INFO] [__main__.__init__:140] [INFO] 商品数量: 500
+[2025-08-26 13:34:08] [INFO] [__main__.__init__:141] [INFO] 分类数量: 20
+[2025-08-26 13:34:08] [INFO] [__main__.start_generation:376] [INIT] 初始化Kafka生产者连接...
+[2025-08-26 13:34:08] [INFO] [kafka.conn.connect:380] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-08-26 13:34:08] [INFO] [kafka.conn.check_version:1205] Probing node bootstrap-0 broker version
+[2025-08-26 13:34:08] [INFO] [kafka.conn.connect:410] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+[2025-08-26 13:34:09] [INFO] [kafka.conn.check_version:1267] Broker version identified as 2.5.0
+[2025-08-26 13:34:09] [INFO] [kafka.conn.check_version:1268] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2025-08-26 13:34:09] [INFO] [kafka_integration.producer._connect:110] [SUCCESS] Kafka生产者连接成功: localhost:9092
+[2025-08-26 13:34:09] [INFO] [__main__.start_generation:389] [SUCCESS] 数据生成器启动成功
+[2025-08-26 13:34:09] [INFO] [kafka.conn.connect:380] <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-08-26 13:34:09] [INFO] [kafka.conn.connect:410] <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+[2025-08-26 13:34:09] [INFO] [kafka.conn.close:919] <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+[2025-08-26 13:34:15] [INFO] [__main__.<module>:922] [MAIN] 启动电商Spark流处理器...
+[2025-08-26 13:34:15] [INFO] [__main__._setup_spark:232] [SPARK_SETUP] 开始初始化Spark会话...
+[2025-08-26 13:34:15] [INFO] [__main__._setup_spark:248] [SPARK_SETUP] 应用Spark配置项: 26个
+[2025-08-26 13:34:15] [INFO] [__main__._setup_spark:259] [SPARK_SETUP] Spark连接尝试 1/3
+[2025-08-26 13:34:16] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:34:27] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:34:28] [INFO] [__main__._setup_spark:268] [SPARK_SETUP] 执行Spark连接测试...
+[2025-08-26 13:34:36] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:34:39] [INFO] [__main__._log_generation_stats:507] [STATS] 总事件数: 300, 生成速度: 10.0/秒, 错误数: 0
+[2025-08-26 13:34:39] [INFO] [__main__._log_generation_stats:514] [STATS] 事件类型分布: view: 150, click: 89, purchase: 11, add_to_cart: 40, rate: 10
+[2025-08-26 13:34:47] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:34:49] [INFO] [__main__._setup_spark:271] [SPARK_SETUP] Spark连接测试成功
+[2025-08-26 13:34:49] [INFO] [__main__._setup_spark:277] [SPARK_JVM] java.library.path: C:/Users/30650/PycharmProjects/e-commerce/hadoop/bin...
+[2025-08-26 13:34:49] [INFO] [__main__._setup_spark:278] [SPARK_JVM] hadoop.home.dir: C:/Users/30650/PycharmProjects/e-commerce/hadoop
+[2025-08-26 13:34:49] [INFO] [__main__._setup_spark:282] [SPARK_SETUP] Spark会话初始化成功
+[2025-08-26 13:34:49] [INFO] [__main__._setup_connections:320] [DATABASE] MongoDB连接成功
+[2025-08-26 13:34:49] [INFO] [__main__._setup_connections:341] [DATABASE] Redis连接成功
+[2025-08-26 13:34:49] [INFO] [__main__.start_processing:810] [START] 启动Spark流处理服务...
+[2025-08-26 13:34:49] [INFO] [__main__._process_user_behavior_stream:743] [STREAM_PROC] 使用检查点目录: file:///C:/Users/30650/PycharmProjects/e-commerce/PythonProject/checkpoints
+[2025-08-26 13:34:50] [INFO] [__main__._process_user_behavior_stream:751] [STREAM_PROC] 用户行为流处理启动成功（foreachBatch模式）
+[2025-08-26 13:34:50] [INFO] [__main__.start_processing:815] [SUCCESS] 所有流处理任务已启动
+[2025-08-26 13:34:56] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:35:02] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:35:02] [INFO] [__main__.get_real_time_stats:329] 从MongoDB获取实时数据成功
+[2025-08-26 13:35:05] [INFO] [__main__._process_batch_data:782] [BATCH_1586] 处理 540 条记录
+[2025-08-26 13:35:06] [INFO] [__main__._write_to_mongodb:498] [BATCH_1586] MongoDB写入 540 条记录
+[2025-08-26 13:35:09] [INFO] [__main__._log_generation_stats:507] [STATS] 总事件数: 600, 生成速度: 10.0/秒, 错误数: 0
+[2025-08-26 13:35:09] [INFO] [__main__._log_generation_stats:514] [STATS] 事件类型分布: view: 295, click: 175, purchase: 24, add_to_cart: 91, rate: 15
+[2025-08-26 13:35:11] [INFO] [__main__._update_real_time_stats:600] [BATCH_1586] 统计更新完成 - 活跃用户: 422, 页面浏览: 262, 购买: 21, 收入: 18320.39
+[2025-08-26 13:35:11] [INFO] [__main__._process_batch_data:794] [BATCH_1586] 批次处理完成
+[2025-08-26 13:35:12] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:35:14] [INFO] [__main__._process_batch_data:782] [BATCH_1587] 处理 100 条记录
+[2025-08-26 13:35:15] [INFO] [__main__._write_to_mongodb:498] [BATCH_1587] MongoDB写入 100 条记录
+[2025-08-26 13:35:19] [INFO] [__main__._update_real_time_stats:600] [BATCH_1587] 统计更新完成 - 活跃用户: 97, 页面浏览: 59, 购买: 5, 收入: 4229.27
+[2025-08-26 13:35:19] [INFO] [__main__._process_batch_data:794] [BATCH_1587] 批次处理完成
+[2025-08-26 13:35:22] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:35:22] [INFO] [__main__._process_batch_data:782] [BATCH_1588] 处理 80 条记录
+[2025-08-26 13:35:23] [INFO] [__main__._write_to_mongodb:498] [BATCH_1588] MongoDB写入 80 条记录
+[2025-08-26 13:35:27] [INFO] [__main__._update_real_time_stats:600] [BATCH_1588] 统计更新完成 - 活跃用户: 76, 页面浏览: 43, 购买: 0, 收入: 0.00
+[2025-08-26 13:35:27] [INFO] [__main__._process_batch_data:794] [BATCH_1588] 批次处理完成
+[2025-08-26 13:35:31] [INFO] [__main__._process_batch_data:782] [BATCH_1589] 处理 90 条记录
+[2025-08-26 13:35:32] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:35:32] [INFO] [__main__._write_to_mongodb:498] [BATCH_1589] MongoDB写入 90 条记录
+[2025-08-26 13:35:36] [INFO] [__main__._update_real_time_stats:600] [BATCH_1589] 统计更新完成 - 活跃用户: 88, 页面浏览: 45, 购买: 0, 收入: 0.00
+[2025-08-26 13:35:36] [INFO] [__main__._process_batch_data:794] [BATCH_1589] 批次处理完成
+[2025-08-26 13:35:39] [INFO] [__main__._log_generation_stats:507] [STATS] 总事件数: 900, 生成速度: 10.0/秒, 错误数: 0
+[2025-08-26 13:35:39] [INFO] [__main__._log_generation_stats:514] [STATS] 事件类型分布: view: 455, click: 253, purchase: 30, add_to_cart: 138, rate: 24
+[2025-08-26 13:35:41] [INFO] [__main__._process_batch_data:782] [BATCH_1590] 处理 100 条记录
+[2025-08-26 13:35:42] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:35:42] [INFO] [__main__._write_to_mongodb:498] [BATCH_1590] MongoDB写入 100 条记录
+[2025-08-26 13:35:46] [INFO] [__main__._update_real_time_stats:600] [BATCH_1590] 统计更新完成 - 活跃用户: 97, 页面浏览: 53, 购买: 5, 收入: 7157.93
+[2025-08-26 13:35:46] [INFO] [__main__._process_batch_data:794] [BATCH_1590] 批次处理完成
+[2025-08-26 13:35:51] [INFO] [__main__._process_batch_data:782] [BATCH_1591] 处理 100 条记录
+[2025-08-26 13:35:52] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:35:52] [INFO] [__main__._write_to_mongodb:498] [BATCH_1591] MongoDB写入 100 条记录
+[2025-08-26 13:35:56] [INFO] [__main__._update_real_time_stats:600] [BATCH_1591] 统计更新完成 - 活跃用户: 94, 页面浏览: 51, 购买: 8, 收入: 7303.06
+[2025-08-26 13:35:56] [INFO] [__main__._process_batch_data:794] [BATCH_1591] 批次处理完成
+[2025-08-26 13:36:02] [INFO] [__main__._process_batch_data:782] [BATCH_1592] 处理 100 条记录
+[2025-08-26 13:36:02] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:03] [INFO] [__main__._write_to_mongodb:498] [BATCH_1592] MongoDB写入 100 条记录
+[2025-08-26 13:36:06] [INFO] [__main__._update_real_time_stats:600] [BATCH_1592] 统计更新完成 - 活跃用户: 95, 页面浏览: 47, 购买: 5, 收入: 6503.63
+[2025-08-26 13:36:06] [INFO] [__main__._process_batch_data:794] [BATCH_1592] 批次处理完成
+[2025-08-26 13:36:09] [INFO] [__main__._log_generation_stats:507] [STATS] 总事件数: 1200, 生成速度: 10.0/秒, 错误数: 0
+[2025-08-26 13:36:09] [INFO] [__main__._log_generation_stats:514] [STATS] 事件类型分布: view: 611, click: 332, purchase: 47, add_to_cart: 180, rate: 30
+[2025-08-26 13:36:11] [INFO] [__main__._process_batch_data:782] [BATCH_1593] 处理 90 条记录
+[2025-08-26 13:36:12] [INFO] [__main__._write_to_mongodb:498] [BATCH_1593] MongoDB写入 90 条记录
+[2025-08-26 13:36:13] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:16] [INFO] [__main__._update_real_time_stats:600] [BATCH_1593] 统计更新完成 - 活跃用户: 89, 页面浏览: 51, 购买: 3, 收入: 3632.63
+[2025-08-26 13:36:16] [INFO] [__main__._process_batch_data:794] [BATCH_1593] 批次处理完成
+[2025-08-26 13:36:22] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:22] [INFO] [__main__._process_batch_data:782] [BATCH_1594] 处理 100 条记录
+[2025-08-26 13:36:22] [INFO] [__main__._write_to_mongodb:498] [BATCH_1594] MongoDB写入 100 条记录
+[2025-08-26 13:36:23] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:23] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:26] [INFO] [__main__._update_real_time_stats:600] [BATCH_1594] 统计更新完成 - 活跃用户: 97, 页面浏览: 40, 购买: 2, 收入: 815.17
+[2025-08-26 13:36:26] [INFO] [__main__._process_batch_data:794] [BATCH_1594] 批次处理完成
+[2025-08-26 13:36:32] [INFO] [__main__._process_batch_data:782] [BATCH_1595] 处理 100 条记录
+[2025-08-26 13:36:32] [INFO] [__main__._write_to_mongodb:498] [BATCH_1595] MongoDB写入 100 条记录
+[2025-08-26 13:36:33] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:36] [INFO] [__main__._update_real_time_stats:600] [BATCH_1595] 统计更新完成 - 活跃用户: 94, 页面浏览: 56, 购买: 4, 收入: 6178.83
+[2025-08-26 13:36:36] [INFO] [__main__._process_batch_data:794] [BATCH_1595] 批次处理完成
+[2025-08-26 13:36:39] [INFO] [__main__._log_generation_stats:507] [STATS] 总事件数: 1490, 生成速度: 9.7/秒, 错误数: 0
+[2025-08-26 13:36:39] [INFO] [__main__._log_generation_stats:514] [STATS] 事件类型分布: view: 763, click: 409, purchase: 55, add_to_cart: 224, rate: 39
+[2025-08-26 13:36:41] [INFO] [__main__._process_batch_data:782] [BATCH_1596] 处理 100 条记录
+[2025-08-26 13:36:41] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:41] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:42] [INFO] [__main__._write_to_mongodb:498] [BATCH_1596] MongoDB写入 100 条记录
+[2025-08-26 13:36:46] [INFO] [__main__._update_real_time_stats:600] [BATCH_1596] 统计更新完成 - 活跃用户: 98, 页面浏览: 61, 购买: 2, 收入: 1960.53
+[2025-08-26 13:36:46] [INFO] [__main__._process_batch_data:794] [BATCH_1596] 批次处理完成
+[2025-08-26 13:36:51] [INFO] [__main__._process_batch_data:782] [BATCH_1597] 处理 100 条记录
+[2025-08-26 13:36:52] [INFO] [__main__._write_to_mongodb:498] [BATCH_1597] MongoDB写入 100 条记录
+[2025-08-26 13:36:53] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:36:56] [INFO] [__main__._update_real_time_stats:600] [BATCH_1597] 统计更新完成 - 活跃用户: 96, 页面浏览: 42, 购买: 1, 收入: 1576.52
+[2025-08-26 13:36:56] [INFO] [__main__._process_batch_data:794] [BATCH_1597] 批次处理完成
+[2025-08-26 13:37:02] [INFO] [__main__._process_batch_data:782] [BATCH_1598] 处理 100 条记录
+[2025-08-26 13:37:02] [INFO] [__main__.get_real_time_stats:280] 从Redis缓存获取实时数据成功
+[2025-08-26 13:37:03] [INFO] [__main__._write_to_mongodb:498] [BATCH_1598] MongoDB写入 100 条记录
+[2025-08-26 13:37:05] [INFO] [__main__.start_generation:425] [INFO] 接收到中断信号，停止数据生成
+[2025-08-26 13:37:05] [INFO] [__main__.start_generation:439] [STOP] 数据生成器已停止
+[2025-08-26 13:37:05] [INFO] [__main__.stop_generation:530] [INFO] 数据生成器未在运行
+[2025-08-26 13:37:05] [INFO] [kafka.producer.kafka.close:483] Closing the Kafka producer with 0 secs timeout.
+[2025-08-26 13:37:05] [INFO] [kafka.producer.kafka.close:499] Proceeding to force close the producer since pending requests could not be completed within timeout 0.
+[2025-08-26 13:37:06] [ERROR] [__main__._update_real_time_stats:604] [BATCH_1598] 统计更新失败: An error occurred while calling o1539.count.
+: org.apache.spark.SparkException: Job 132 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1184)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1182)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:79)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:2883)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:84)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:2780)
+	at org.apache.spark.SparkContext.$anonfun$stop$11(SparkContext.scala:2105)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1484)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2105)
+	at org.apache.spark.SparkContext.$anonfun$new$35(SparkContext.scala:670)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2066)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2238)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2259)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2278)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2303)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1021)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1020)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:424)
+	at org.apache.spark.sql.Dataset.$anonfun$count$1(Dataset.scala:3201)
+	at org.apache.spark.sql.Dataset.$anonfun$count$1$adapted(Dataset.scala:3200)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$2(Dataset.scala:3898)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:510)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3896)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3896)
+	at org.apache.spark.sql.Dataset.count(Dataset.scala:3200)
+	at jdk.internal.reflect.GeneratedMethodAccessor176.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy37.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:51)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:51)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:32)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:665)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:663)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:68)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:663)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:256)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:68)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:219)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:213)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:307)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:285)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:208)
+
+[2025-08-26 13:37:06] [INFO] [__main__._process_batch_data:794] [BATCH_1598] 批次处理完成
+[2025-08-26 13:37:07] [INFO] [__main__.signal_handler:883] 接收到停止信号，正在关闭流处理器...
+[2025-08-26 13:37:07] [INFO] [__main__.stop_processing:832] [STOP] 停止流处理服务...
+[2025-08-26 13:37:07] [INFO] [root.send_command:1052] Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\30650\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "C:\Users\30650\PycharmProjects\e-commerce\.venv\lib\site-packages\py4j\clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+[2025-08-26 13:37:07] [INFO] [__main__._shutdown_system:1138] [INFO] 关闭系统...
+[2025-08-26 13:37:07] [INFO] [kafka.producer.kafka.close:483] Closing the Kafka producer with 4294967.0 secs timeout.
+[2025-08-26 13:37:07] [INFO] [kafka.conn.close:919] <BrokerConnection node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+[2025-08-26 13:37:07] [INFO] [kafka_integration.producer.close:318] [KAFKA] 生产者已关闭
+[2025-08-26 13:37:07] [INFO] [kafka_integration.producer.close_kafka_producer:439] [KAFKA] 全局生产者已清理
+[2025-08-26 13:37:07] [INFO] [__main__._shutdown_system:1156] [SUCCESS] 系统已关闭
+[2025-08-26 13:37:09] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[2025-08-26 13:37:09] [INFO] [__main__.run_stream_processor:907] 确保流处理器资源清理...
+[2025-08-26 13:37:09] [INFO] [__main__.stop_processing:832] [STOP] 停止流处理服务...
+[2025-08-26 13:37:11] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[2025-08-26 13:37:11] [INFO] [__main__.stop_processing:832] [STOP] 停止流处理服务...
+[2025-08-26 13:37:13] [ERROR] [__main__.stop_processing:862] [ERROR] 停止流处理时出错: [WinError 10061] 由于目标计算机积极拒绝，无法连接。

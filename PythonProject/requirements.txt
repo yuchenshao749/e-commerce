@@ -7,12 +7,12 @@ python-multipart==0.0.6
 # === 大数据处理 ===
 pyspark==3.5.0
 kafka-python==2.0.2
-py4j==0.10.9.7
+# py4j 由 pyspark 自带，如需锁定版本可取消下一行注释
+# py4j==0.10.9.7
 
 # === 数据库和缓存 ===
 pymongo==4.6.0
 redis==5.0.1
-motor==3.3.2
 
 # === 机器学习 ===
 scikit-learn==1.3.2
@@ -25,36 +25,5 @@ Faker==20.1.0
 python-dateutil==2.8.2
 pytz==2023.3
 
-# === 日志和监控 ===
-structlog==23.2.0
-colorama==0.4.6
-
-# === HTTP客户端 ===
-httpx==0.25.2
-aiohttp==3.9.1
-
-# === 开发工具 ===
-python-dotenv==1.0.0
-watchdog==3.0.0
-
 # === 系统工具 ===
 psutil==5.9.8
-schedule==1.2.0
-
-# === 数据序列化 ===
-orjson==3.9.10
-msgpack==1.0.7
-
-# === WebSocket支持 ===
-websockets==12.0
-
-# === CORS支持 ===
-python-cors==1.7.0
-
-# === 异步支持 ===
-asyncio==3.4.3
-aiofiles==23.2.1
-
-# === 网络工具 ===
-netifaces==0.11.0
-python-interface==1.6.1 

@@ -46,10 +46,9 @@
 │   ├── ml_models/                  # 机器学习模型
 │   ├── utils/                      # 工具模块
 │   ├── main.py                     # 主API服务器
-│   ├── start_backend.py            # 后端启动脚本
 │   ├── requirements.txt            # Python依赖
 │   └── README.md                   # 后端详细说明
-└── ReactProject/                   # 前端React项目
+└── react/                          # 前端React项目
     ├── src/                        # 源代码目录
     ├── public/                     # 静态资源
     ├── package.json               # 前端依赖
@@ -109,7 +108,7 @@ cd PythonProject
 pip install -r requirements.txt
 
 # 启动后端API服务器
-python start_backend.py
+python -m PythonProject.main
 ```
 
 **后端服务地址:**
@@ -121,7 +120,7 @@ python start_backend.py
 
 ```bash
 # 进入前端目录  
-cd ReactProject
+cd react
 
 # 安装前端依赖
 npm install

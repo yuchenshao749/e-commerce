@@ -356,43 +356,41 @@ class EcommerceKafkaProducer:
             
         检查项：
             - 生产者连接状态
-            - 主题配置
-            - 服务器连接
+            - 主题元数据可用性
         """
         try:
             if not self.producer:
                 return {"status": "unhealthy", "reason": "producer not connected"}
-            
-            # 尝试获取集群元数据来验证连接
-            try:
-                cluster_metadata = self.producer.list_consumer_groups(timeout_ms=5000)
-            except:
-                # 如果获取元数据失败，但producer存在，仍认为基本连接健康
-                pass
-            
+
+            topics = list(self.topics.values())
+            topic_partitions: Dict[str, Any] = {}
+            available_topics = 0
+
+            for t in topics:
+                try:
+                    partitions = self.producer.partitions_for(t)
+                    topic_partitions[t] = list(partitions) if partitions else None
+                    if partitions:
+                        available_topics += 1
+                except Exception as e:
+                    topic_partitions[t] = None
+
+            status = "healthy" if available_topics > 0 else "degraded"
+
             return {
-                "status": "healthy",
+                "status": status,
                 "producer_connected": True,
-                "topics_configured": list(self.topics.values()),
+                "topics_configured": topics,
+                "topics_partitions": topic_partitions,
                 "bootstrap_servers": self.config["bootstrap_servers"]
             }
-            
+
         except Exception as e:
-            # 即使获取元数据失败，如果producer对象存在，仍认为基本连接是健康的
-            if self.producer is not None:
-                return {
-                    "status": "healthy",
-                    "producer_connected": True,
-                    "topics_configured": list(self.topics.values()),
-                    "bootstrap_servers": self.config["bootstrap_servers"],
-                    "note": "Connected but metadata access limited"
-                }
-            else:
-                return {
-                    "status": "unhealthy",
-                    "reason": str(e),
-                    "producer_connected": False
-                }
+            return {
+                "status": "unhealthy",
+                "reason": str(e),
+                "producer_connected": bool(self.producer)
+            }
 
 
 # =============================================================================

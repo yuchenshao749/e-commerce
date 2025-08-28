@@ -1,8 +1,8 @@
 // MongoDB初始化脚本
 print('开始初始化电商数据库...');
 
-// 切换到ecommerce数据库
-db = db.getSiblingDB('ecommerce');
+// 切换到与应用一致的数据库
+db = db.getSiblingDB('ecommerce_analytics');
 
 // 创建用户集合并插入示例数据
 db.users.insertMany([
@@ -52,10 +52,14 @@ db.products.insertMany([
 db.orders.createIndex({ "user_id": 1 });
 db.orders.createIndex({ "order_date": -1 });
 
-// 创建用户行为集合
-db.user_behaviors.createIndex({ "user_id": 1 });
-db.user_behaviors.createIndex({ "timestamp": -1 });
-db.user_behaviors.createIndex({ "action": 1 });
+// 创建用户行为集合（与应用集合名一致）
+db.user_behavior.createIndex({ "user_id": 1 });
+db.user_behavior.createIndex({ "timestamp": -1 });
+db.user_behavior.createIndex({ "action_type": 1 });
+
+// 创建热门商品/分类集合（供累计统计）
+db.popular_products.createIndex({ "product_id": 1 }, { unique: true });
+db.popular_categories.createIndex({ "category_id": 1 }, { unique: true });
 
 // 创建实时统计集合
 db.real_time_stats.createIndex({ "timestamp": -1 });

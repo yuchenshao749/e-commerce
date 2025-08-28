@@ -271,13 +271,19 @@ class EcommerceAnalyticsSystem:
             返回：活跃用户数、页面浏览量、购买数量、收入等实时指标
             """
             try:
-                # 优先从Redis缓存获取数据
+                # 优先从Redis缓存获取数据（统一键名 real_time_stats:current）
                 if self.redis_client is not None:
                     try:
-                        cached_data = self.redis_client.get("real_time_stats")
+                        cached_data = self.redis_client.get("real_time_stats:current")
                         if cached_data:
                             data = json.loads(cached_data)
                             logger.info("从Redis缓存获取实时数据成功")
+                            return data
+                        # 兼容旧键名（回退一次）
+                        cached_data_legacy = self.redis_client.get("real_time_stats")
+                        if cached_data_legacy:
+                            data = json.loads(cached_data_legacy)
+                            logger.info("从Redis缓存获取实时数据成功（legacy键名）")
                             return data
                     except Exception as redis_error:
                         logger.warning(f"Redis获取数据失败，尝试MongoDB: {redis_error}")

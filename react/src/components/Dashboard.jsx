@@ -212,7 +212,7 @@ const Dashboard = () => {
           <Card className="dashboard-card">
             <Statistic
               title="活跃用户"
-              value={realTimeStats?.total_active_users || 0}
+              value={realTimeStats?.active_users || 0}
               precision={0}
               valueStyle={{ color: '#1890ff' }}
               prefix={<UserOutlined />}
@@ -224,7 +224,7 @@ const Dashboard = () => {
           <Card className="dashboard-card">
             <Statistic
               title="页面浏览"
-              value={realTimeStats?.total_page_views || 0}
+              value={realTimeStats?.page_views || 0}
               precision={0}
               valueStyle={{ color: '#52c41a' }}
               prefix={<EyeOutlined />}
@@ -236,7 +236,7 @@ const Dashboard = () => {
           <Card className="dashboard-card">
             <Statistic
               title="购买数量"
-              value={realTimeStats?.total_purchases || 0}
+              value={realTimeStats?.purchases || 0}
               precision={0}
               valueStyle={{ color: '#faad14' }}
               prefix={<ShoppingCartOutlined />}
@@ -248,7 +248,7 @@ const Dashboard = () => {
           <Card className="dashboard-card">
             <Statistic
               title="总收入"
-              value={realTimeStats?.total_revenue || 0}
+              value={realTimeStats?.revenue || 0}
               precision={2}
               valueStyle={{ color: '#ff4d4f' }}
               prefix={<DollarOutlined />}
